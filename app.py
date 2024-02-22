@@ -3,8 +3,8 @@ from flask import Flask,request,app,jsonify,url_for,render_template
 import numpy as np
 import pandas as pd 
 app=Flask(__name__)
-model=pickle.load(open('classifymodel.pkl','rb'))
-sc=pickle.load(open('scaling.pkl','rb'))
+model=pickle.load(open('classicmodel.pkl','rb'))
+sc=pickle.load(open('scale.pkl','rb'))
 @app.route('/')
 def home():
     return render_template('home1.html')
